@@ -31,22 +31,28 @@ header .top-contents {
 
 header .logo-place {
   position: relative;
+  width: 205px;
 }
 header .top-logo {
   width: 205px;
   position: relative;
   z-index: 1;
   transition: 0.5s;
+  display: none;
 }
 
-header .top-logo:hover {
+/* header .top-logo:hover {
   opacity: 0;
-}
+} */
 
 header .top-logo-gray {
   width: 205px;
   position: absolute;
-  left: -0px;
+  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   /* z-index: 1; */
 }
 
