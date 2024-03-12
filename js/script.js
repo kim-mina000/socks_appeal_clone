@@ -1,14 +1,22 @@
 // logo hover시 색상 변환
-const topLogo = document.querySelector('.logo-place .top-logo');
+const logoPlace = document.querySelector('.logo-place');
 
-topLogo.addEventListener('mouseenter',function () {
-  topLogo.style.display="none";
+logoPlace.addEventListener('mouseenter',function () {
+  logoPlace.querySelector('.top-logo').style.opacity=0;
+  logoPlace.querySelector('.top-logo-gray').style.opacity=1;
 });
-topLogo.addEventListener('blur',function () {
-  topLogo.style.display="block";
+logoPlace.addEventListener('mouseleave',function () {
+  logoPlace.querySelector('.top-logo-gray').style.opacity=0;
+  logoPlace.querySelector('.top-logo').style.opacity=1;
 });
 
-let slideIndex = 1;
+// 메뉴
+const topMenuIl = document.querySelectorAll('.top-menu>li');
+const menuView = document.querySelector('.menu-view');
 
-setInterval(function () {
-},2500);
+topMenuIl.forEach((mainMenu,index) => {
+  mainMenu.addEventListener('mouseenter', ()=>{
+    console.log(menuView[index]);
+    // menuView.classList.add('.showMenu');
+  });
+});

@@ -1,3 +1,4 @@
+
 a {
   text-decoration: none;
   color: black;
@@ -6,6 +7,8 @@ a {
 body {
   font-family:'Montserrat', 'Noto Sans KR', sans-serif;
   color: black;
+  position: relative;;
+  height: auto;
 }
 
 header {
@@ -33,12 +36,18 @@ header .logo-place {
   position: relative;
   width: 205px;
 }
+
 header .top-logo {
   width: 205px;
-  position: relative;
+  position: absolute;
   z-index: 1;
-  transition: 0.5s;
-  display: none;
+  transition: 0.7s;
+  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  /* display: none; */
 }
 
 /* header .top-logo:hover {
@@ -53,18 +62,23 @@ header .top-logo-gray {
   right: 0;
   bottom: 0;
   margin: auto;
+  transition: 0.7s;
   /* z-index: 1; */
 }
 
 header .top-menu {
   display: flex;
 }
-header .top-menu>il {
-  padding: 0px 25px;
-  display: block;
+header .top-menu>li>a {
+  line-height: 80px;
 }
 
-header .top-menu>il>a {
+header .top-menu>li {
+  padding: 0px 15px;
+  height: 80px;
+}
+
+header .top-menu>li a {
   color: black;
   font-weight: 500;
 }
@@ -78,17 +92,20 @@ header .top-menu .menu-view{
   
   display: none;
 }
+header .top-menu li:hover>.menu-view {
+  display: block;
+}
 
-header .top-menu .menu-view>il{
+
+header .top-menu .menu-view>li{
   display: flex;
   padding: 10px 20px;
   box-sizing: border-box;
-
 }
-header .top-menu .menu-view>il>a{
+header .top-menu .menu-view>li>a{
   transition: 0.6s;
 }
-header .top-menu .menu-view>il>a:hover{
+header .top-menu .menu-view>li>a:hover{
   padding-left: 7px;
 }
 header .top-user>span {
@@ -97,35 +114,40 @@ header .top-user>span {
   text-align: center;
 }
 
-.main-contents {
+.slider-container {
 /* position: relative; */
 width: 100%;
 height: 600px;
 overflow: hidden;
-
-position: absolute; /* 이건 왜 적용 된걸까유,,*/
+/* 이건 왜 적용 된걸까유,, */
+position: absolute; 
 top:0px;
 z-index: -1;
 }
 
-.main-contents .slider-ul {
+.slider-container .slider-ul {
   position: relative;;
 }
 
-.main-contents .slider-ul il {
+.slider-container .slider-ul il {
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.main-contents .slider-ul img{
+.slider-container .slider-ul img{
   width: 100%;
 }
 
-#test {
-  width: 100px;
-  height: 100px;
-  background-color: pink;
+
+
+footer .footer-bg {
+  width: 100%;
+  height: 218px;
+  padding: 60px 0;
+  background-color: black;
+  display: block;
+  position: absolute;
   bottom: 0;
 }
