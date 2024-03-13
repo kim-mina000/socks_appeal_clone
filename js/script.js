@@ -10,13 +10,26 @@ logoPlace.addEventListener('mouseleave',function () {
   logoPlace.querySelector('.top-logo').style.opacity=1;
 });
 
-// 메뉴
-const topMenuIl = document.querySelectorAll('.top-menu>li');
-const menuView = document.querySelector('.menu-view');
+// top-menu 중 user
 
-topMenuIl.forEach((mainMenu,index) => {
-  mainMenu.addEventListener('mouseenter', ()=>{
-    console.log(menuView[index]);
-    // menuView.classList.add('.showMenu');
-  });
+document.querySelector('.top-user .person').addEventListener('mouseleave', function () {
+  document.querySelector('.top-user .top-user--contents').style.display = 'none';
 });
+document.querySelector('.top-user .person').addEventListener('mouseenter', function () {
+  document.querySelector('.top-user .top-user--contents').style.display = 'block';
+});
+
+// top-menu 중 search
+const searchIcon = document.querySelector('.top-user .search');
+const searchContainerStyle = document.querySelector('.search_container').style;
+
+searchIcon.addEventListener('click', function () {
+  if ( searchContainerStyle.height == '300px' ){
+    searchContainerStyle.height = '0px';
+    searchContainerStyle.visibility = 'hidden';
+  } else { 
+    searchContainerStyle.height = '300px';
+    searchContainerStyle.visibility = 'visible';
+ };
+});
+
