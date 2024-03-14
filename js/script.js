@@ -30,6 +30,15 @@ searchIcon.addEventListener('click', function () {
   } else { 
     searchContainerStyle.height = '300px';
     searchContainerStyle.visibility = 'visible';
- };
+  };
 });
 
+
+// SLIDER 구현
+new Swiper('.swiper',{
+  // direction: 'horizental', //수직슬라이드 <-> 수평:horizental
+  loop: true, //반복재생여부
+  autoplay: true, //자동재생여부
+  autoplay: {delay:5000},
+  centeredSlides: true
+});
