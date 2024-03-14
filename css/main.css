@@ -7,12 +7,31 @@ a {
 body {
   font-family:'Montserrat', 'Noto Sans KR', sans-serif;
   color: black;
-  position: relative;;
-  height: auto;
+  position: relative;
+}
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.zoom {
+  overflow: hidden;
+  position: relative;
+}
+.zoom img {
+  transition: 1s;
+}
+.zoom:hover img{
+  scale: 110%;
 }
 
 header {
   transition: background-color 0.6s;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
 }
 header:hover {
   background-color: #ffffffc0;
@@ -21,9 +40,10 @@ header:hover {
 
 header .top-contents {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  column-gap: 45px;
   
   height: 80px;
   max-width:80vw;
@@ -172,21 +192,49 @@ header .top-user .top-user--contents #top-user-line{
 
 /* SLIDER */
 .slider-container {
-position: absolute;
-top:0;
 width: 100%;
-height: 600px;
+height: 80%;
 overflow: hidden;
+position: relative;
 /* 이건 왜 적용 된걸까유,, */
-z-index: -1;
+z-index: -99; 
 }
 .slider-container .swiper-slide>img {
   width: 100%;
 }
 .slider-container .swiper-slide .text_group {
-  position: fixed;
+  color: white;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+
+  position: absolute;
   z-index: 10;
+  left: 20%;
+  top: 400px;
+  margin: auto;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  /* 질문3 얘 왜 자꾸 아래로 꺼질까요,, */
+  /* 왜인지 모르겠는데 해결됨 ,,, 아마 slider 포지션을 fixed가 아니라 absolute로 바꿔서 그런것같음 */
+
 }
+
+.slider-container .swiper-slide .text_group h2 {
+  /* font-weight: 600; */
+  font-size: 3em;
+  padding-bottom: 30px;
+}
+.slider-container .swiper-slide .text_group h4 {
+  font-weight: 700;
+  font-size: 1.3em;
+  padding-bottom: 20px;
+}
+.slider-container .swiper-slide .text_group h6 {
+  font-weight: 300;
+  font-size: 0.7em;
+}
+
 /* 
 .slider-container .slider-ul {
   position: relative;
@@ -214,6 +262,9 @@ z-index: -1;
   align-items: center;
   transition: 1s;
   visibility: hidden;
+  position: fixed;
+  overflow: hidden;
+  top:80px
 }
 .search_container .search_main {
   width: 80%;
@@ -242,8 +293,6 @@ z-index: -1;
   color: #888;
   cursor: pointer;
 }
-
-
 .search_container .recommendation {
   width: 600px;
   margin-top: 60px;
@@ -253,7 +302,81 @@ z-index: -1;
   color: #333;
 }
 
+.main-1--recommandetion { 
+  width: 100%;
+  /* background-color: pink; */
+  position: relative;
 
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* 질문 4 display:flex는 position 속성이 어떻게되나요? */
+}
+.main-1--recommandetion .recommandetion-button {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.main-1--recommandetion .recommandetion-button>a {
+  padding: 10px 15px;
+  border: 1px solid #888;
+  border-radius: 2em;
+  color: #888;
+  transition: 0.5s;
+}
+.main-1--recommandetion .recommandetion-button>a:hover {
+  color: black;
+  border-color: black;
+}
+
+.main-1--recommandetion .recommandetion-generation {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+/* .main-1--recommandetion .recommandetion-generation .zoom {
+  background-color: rgba(10, 10, 10, 0.15);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+} */
+.main-1--recommandetion .recommandetion-generation p {
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  top:50%;
+  right: 50%;
+  transform: translateX(50%) translateY(-50%);
+}
+.main-1--recommandetion .recommandetion-generation a {
+  box-sizing: border-box;
+}
+.main-1--recommandetion .recommandetion-generation .men-kids-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-2--event {
+  width: 100%;
+}
+.main-2--event .event-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 25px;
+}
+.main-2--event .event-div a {
+  box-sizing: border-box;
+}
+.main-2--event .event-div img {
+  width: 580px;
+}
 
 /* FOOTER */
 footer .footer-bg {
