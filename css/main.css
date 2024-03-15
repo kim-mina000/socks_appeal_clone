@@ -25,6 +25,12 @@ body {
 .zoom:hover img{
   scale: 110%;
 }
+.zoom span {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+
+}
 
 header {
   transition: background-color 0.6s;
@@ -302,6 +308,7 @@ z-index: -99;
   color: #333;
 }
 
+/* 01. RECOMMANDETION */
 .main-1--recommandetion { 
   width: 100%;
   /* background-color: pink; */
@@ -362,6 +369,7 @@ z-index: -99;
   justify-content: space-between;
 }
 
+/* 02.EVENT */
 .main-2--event {
   width: 100%;
 }
@@ -378,7 +386,151 @@ z-index: -99;
   width: 580px;
 }
 
+/* 03.WEEKLY BEST */
+.main-3--weekly {}
+.title {
+  text-align: center;
+  line-height: 250px;
+  width: 100%;
+  height: 200px;
+}
+.title h2 {
+  font-size: 26px;
+}
+.main-3--weekly .weekly-group {
+  display: flex;
+  justify-content: space-between;
+
+}
+.main-3--weekly .weekly-group .weekly-each .zoom {
+  width: 390px;
+  height: 390px;
+}
+.main-3--weekly .weekly-group .weekly-each img {
+  width: 100%;
+}
+
+/* 각 상품 내 text-group */
+.text_group {
+  text-align: center;
+}
+.wb-title {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 20px;
+  word-break: keep-all;
+}
+.wb-price {
+  font-weight: 700;
+  font-size: 17px;
+}
+.price-sale {
+  color: #888;
+}
+
+/* 04. NEW ARRIVAL */
+.main-4--new-arrival {}
+.main-4--new-arrival .new-arrival-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main-4--new-arrival .new-arrival-group .new-arrival-each {
+  margin-bottom: 60px;
+}
+.main-4--new-arrival .new-arrival-group .new-arrival-each .zoom {
+  width: 290px;
+  height: 290px;
+
+}
+.main-4--new-arrival .new-arrival-group .new-arrival-each .zoom img {
+  width: 100%;
+}
+.main-4--new-arrival .new-arrival-group .new-arrival-each .text_group {
+  width: 280px; 
+}
+
+
+/* 05.RECOMMENDATION */
+
+/* 06.FEATURED */
+.main-6--featured .title {
+  position: relative;
+}
+.main-6--featured .underline{
+  width: 150px;
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  top:140px;
+}
+/* 질문4 text-decoration:underline 으로 했을때 너무 text 아래 딱 달라붙어서 그냥 div -> position:absolute로 처리...
+이거 더 쉽게 하는 방법 있을까요? 힝 */
+.main-6--featured .featured-button {
+  display: flex;
+  justify-content: center;
+  column-gap: 25px;
+}
+.main-6--featured .featured-button a {
+  display: block;
+  width: 140px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  /* border: 1px solid #333; */
+  border-radius: 2em;
+  position: relative;
+}
+.main-6--featured .featured-button a:hover {
+  background-color: #333;
+  color: #fff;
+}
+.main-6--featured .featured-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main-6--featured .featured-group .featured-each {
+  margin-top: 60px;
+}
+.main-6--featured .featured-group .featured-each .zoom {
+  width: 230px;
+}
+.main-6--featured .featured-group .featured-each .zoom img{
+  width: 100%;
+}
+
+/* KAKAO */
+.kakao .kakao_bg{
+  background-image: url(../img_socks_appeal/kakao.jpg);
+  width: 100%;
+  height: 100px;
+  background-color: pink;}
+
+
+  
 /* FOOTER */
+footer {
+  color:#555;
+  width: 100%;;
+  height: 218px;
+}
+
+footer p {
+  font-size: 14px;
+}
+footer h4{
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 0 5px;
+}
+footer h2{
+  color: #fff;
+  font-size: 25px;
+}
 footer .footer-bg {
   width: 100%;
   height: 218px;
@@ -387,4 +539,47 @@ footer .footer-bg {
   display: block;
   position: absolute;
   bottom: 0;
+}
+footer .inner{
+  display: flex;
+  justify-content: space-between; 
+}
+
+footer .footer-first a{
+  color: #fff;
+  text-decoration: underline;
+  font-size: 14px;
+}
+footer .footer-first .footer-head{
+  display: flex;
+  align-items: center;
+}
+footer .footer-first .footer-head a{
+  text-decoration: none;
+  margin-left: 10px;
+}
+footer .footer-first .footer-head img{
+  width: 130px;
+}
+footer .footer-first .footer-head a{
+  font-size: 18px;
+  font-weight: 300;
+}
+footer .footer-first .footer-body {
+  padding: 40px 0;
+  line-height: 1.5;
+}
+
+footer .footer-second h4 {
+
+}
+footer .footer-second h2, footer .footer-second p{
+  padding: 5px 0;
+}
+
+footer .footer-third h4 a{ 
+  color: #fff;
+}
+footer .footer-third .footer-third-logo{
+  margin-top: 30px;
 }
