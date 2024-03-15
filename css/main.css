@@ -25,11 +25,22 @@ body {
 .zoom:hover img{
   scale: 110%;
 }
-.zoom span {
+.zoom:hover::before {
+  content: "";
+  background-image: url('../img_socks_appeal/icon_202208311612457700.png');
+  width: 30px;
+  height: 30px;
   position: absolute;
-  z-index: 3;
-  top: 0;
-
+  display: block;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: 0;
+  transform: translateY(-15px);
+  background-repeat: no-repeat;
+  transition: translateY 1s;
+  /* 질문5 스르륵 올라가야하는데 안올라감.. */
+  /* hover 두가지는 안먹나요 . . .? */
 }
 
 header {
@@ -434,6 +445,7 @@ z-index: -99;
 
 /* 04. NEW ARRIVAL */
 .main-4--new-arrival {}
+
 .main-4--new-arrival .new-arrival-group {
   display: flex;
   flex-wrap: wrap;
@@ -512,12 +524,16 @@ z-index: -99;
   text-align: center;
 }
 /* 07.CUSTOMER REIVEW */
+.main-7--review {
+  position: relative;
+}
 
 .main-7--review .review-group {
   width: 100%;
   overflow: hidden;
   display: flex;
   column-gap: 30px;
+  position: relative;
 }
 .main-7--review .review-group .review-each {
   position: relative;
@@ -559,7 +575,13 @@ z-index: -99;
 .main-7--review .review-group .review-each .zoom img {
   width: 100%;
 }
-
+.main-7--review .buttom_left span,.main-7--review .buttom_right span{
+  font-size: 42px;
+  background-color: RED;
+}
+.main-7--review .buttom_left { position: absolute; left: -50px; }
+.main-7--review .buttom_right {  position: absolute; right: -50px; }
+/* 월요일 이어서 */
 
 /* KAKAO */
 .kakao {
@@ -567,7 +589,7 @@ z-index: -99;
   height: 350px;
 }
 .kakao .kakao_bg{
-  background-image: url(../img_socks_appeal/kakao.jpg);
+  background-image: url('../img_socks_appeal/kakao.jpg');
   width: 100%;
   height: 145px;
   background-color: pink;
@@ -658,4 +680,57 @@ footer .footer-third h4 a{
 }
 footer .footer-third .footer-third-logo{
   margin-top: 30px;
+}
+
+/* BADGE */
+.badge {
+  width: 45px;
+  height: 90px;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  border-radius: 40%;
+  box-shadow: 2px 2px 5px #8888884f;
+
+  text-align: center;
+  line-height: 65px;
+  
+  cursor: pointer;
+
+  /* 질문 6 얘 그림자 이상하게 생겨요 ,,, */
+}
+.badge .up-to {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  border-radius: 50% 50% 0 0;
+  transition: opacity 1s;
+}
+.badge .down-to {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  border-radius: 0 0 50% 50%;
+  transition: opacity 1s ease;
+}
+.badge .up-to:hover,.badge .down-to:hover {
+  opacity: 0.3;
+}
+
+.badge span {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 100;
+}
+.badge .up-to span {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+}
+
+.badge span::before {
+  content: "";
+  width: 30px;
+  height: 1;
+  background-color: red;
+  position: absolute;
 }

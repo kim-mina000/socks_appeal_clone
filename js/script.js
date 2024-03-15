@@ -42,3 +42,5 @@ new Swiper('.swiper',{
   autoplay: {delay:5000},
   centeredSlides: true
 });
+
+
