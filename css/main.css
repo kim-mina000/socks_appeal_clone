@@ -190,7 +190,6 @@ header .top-user .top-user--contents #top-user-line{
   background-color: rgba(10, 10, 10, 0.15);
 }
 
-
 /* header .top-user {
   position: relative;
 } */
@@ -310,6 +309,7 @@ z-index: -99;
 
 /* 01. RECOMMANDETION */
 .main-1--recommandetion { 
+  margin-top: 80px;
   width: 100%;
   /* background-color: pink; */
   position: relative;
@@ -341,6 +341,7 @@ z-index: -99;
 }
 
 .main-1--recommandetion .recommandetion-generation {
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   column-gap: 30px;
@@ -359,6 +360,7 @@ z-index: -99;
   top:50%;
   right: 50%;
   transform: translateX(50%) translateY(-50%);
+  font-size: 1.5em;
 }
 .main-1--recommandetion .recommandetion-generation a {
   box-sizing: border-box;
@@ -372,6 +374,7 @@ z-index: -99;
 /* 02.EVENT */
 .main-2--event {
   width: 100%;
+  margin-top: 100px;
 }
 .main-2--event .event-div {
   display: flex;
@@ -387,7 +390,6 @@ z-index: -99;
 }
 
 /* 03.WEEKLY BEST */
-.main-3--weekly {}
 .title {
   text-align: center;
   line-height: 250px;
@@ -401,6 +403,8 @@ z-index: -99;
   display: flex;
   justify-content: space-between;
 
+  width: 100%;
+  height: 500px;
 }
 .main-3--weekly .weekly-group .weekly-each .zoom {
   width: 390px;
@@ -502,16 +506,92 @@ z-index: -99;
 .main-6--featured .featured-group .featured-each .zoom img{
   width: 100%;
 }
+.main-6--featured .featured-each .text-group {
+  width:230px;
+  word-break: keep-all;
+  text-align: center;
+}
+/* 07.CUSTOMER REIVEW */
+
+.main-7--review .review-group {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  column-gap: 30px;
+}
+.main-7--review .review-group .review-each {
+  position: relative;
+  width: 280px;
+  height: 450px;
+}
+.main-7--review .review-group .review-each:last-child:after {
+  display: none;
+}
+.main-7--review .review-group .review-each::after {
+  width: 1px;
+  height: 100%;
+  background-color: #88888818;
+  /* border: 1px solid red; */
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 0;
+  bottom:0;
+  margin: auto;
+}
+.main-7--review .review-group .review-each .rv-title {
+  position: absolute;
+  bottom: 130px;
+}
+.main-7--review .review-group .review-each .rv-description {
+  position: absolute;
+  bottom: 100px;
+}
+.main-7--review .review-group .review-each .rv-date {
+  position: absolute;
+  bottom: 30px;
+}
+
+.main-7--review .review-group .review-each .zoom {
+  width: 280px;
+  height: 280px;
+}
+.main-7--review .review-group .review-each .zoom img {
+  width: 100%;
+}
+
 
 /* KAKAO */
+.kakao {
+  width: 100%;
+  height: 350px;
+}
 .kakao .kakao_bg{
   background-image: url(../img_socks_appeal/kakao.jpg);
   width: 100%;
-  height: 100px;
-  background-color: pink;}
+  height: 145px;
+  background-color: pink;
+  position: relative;
+}
+
+.kakao .kakao_bg h2 {
+  font-size: 32px;
+  font-weight: 600;
+  position: absolute;
+  top:25%;
+  left:15%;
+}
+.kakao .kakao_bg p {
+  font-size: 16px;
+  font-weight: 100;
+  color: #555;
+  position: absolute;
+  top: 60%;
+  left: 15%;
+}
 
 
-  
+
 /* FOOTER */
 footer {
   color:#555;
@@ -568,10 +648,6 @@ footer .footer-first .footer-head a{
 footer .footer-first .footer-body {
   padding: 40px 0;
   line-height: 1.5;
-}
-
-footer .footer-second h4 {
-
 }
 footer .footer-second h2, footer .footer-second p{
   padding: 5px 0;
