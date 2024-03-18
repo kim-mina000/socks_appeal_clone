@@ -53,6 +53,10 @@ header {
 header:hover {
   background-color: #ffffffc0;
 }
+.header-style {
+  background-color: #ffffffc0;
+  box-shadow: 5px 0 5px#8888886b;
+}
 
 
 header .top-contents {
@@ -78,7 +82,7 @@ header .top-logo {
   width: 205px;
   position: absolute;
   z-index: 1;
-  transition: 0.7s;
+  transition: opacity 0.7s;
   left: 0px;
   top: 0;
   right: 0;
@@ -99,7 +103,7 @@ header .top-logo-gray {
   right: 0;
   bottom: 0;
   margin: auto;
-  transition: 0.7s;
+  transition: opacity 0.7s;
   /* z-index: 1; */
 }
 
@@ -128,6 +132,7 @@ header .top-menu .menu-view{
   top:80px;
   
   display: none;
+  box-shadow: 5px 5px 5px#8888886b;
 }
 header .top-menu li:hover>.menu-view {
   display: block;
@@ -218,7 +223,7 @@ z-index: -99;
 .slider-container .swiper-slide>img {
   width: 100%;
 }
-.slider-container .swiper-slide .text_group {
+.slider-container .swiper-slide .slide-text_group {
   color: white;
   display: flex;
   align-items: left;
@@ -236,17 +241,17 @@ z-index: -99;
 
 }
 
-.slider-container .swiper-slide .text_group h2 {
+.slider-container .swiper-slide .slide-text_group h2 {
   /* font-weight: 600; */
   font-size: 3em;
   padding-bottom: 30px;
 }
-.slider-container .swiper-slide .text_group h4 {
+.slider-container .swiper-slide .slide-text_group h4 {
   font-weight: 700;
   font-size: 1.3em;
   padding-bottom: 20px;
 }
-.slider-container .swiper-slide .text_group h6 {
+.slider-container .swiper-slide .slide-text_group h6 {
   font-weight: 300;
   font-size: 0.7em;
 }
@@ -280,7 +285,8 @@ z-index: -99;
   visibility: hidden;
   position: fixed;
   overflow: hidden;
-  top:80px
+  top:80px;
+  z-index: 5;
 }
 .search_container .search_main {
   width: 80%;
@@ -470,9 +476,16 @@ z-index: -99;
 /* 05.RECOMMENDATION */
 
 /* 06.FEATURED */
-.main-6--featured .title {
+.main-6--featured {
   position: relative;
+  width: 100%;
+  height: 1050px;
+  /* overflow: hidden; */
 }
+/* .main-6--featured .title {
+  position: relative;
+
+} */
 .main-6--featured .underline{
   width: 150px;
   height: 1px;
@@ -485,6 +498,7 @@ z-index: -99;
 }
 /* 질문4 text-decoration:underline 으로 했을때 너무 text 아래 딱 달라붙어서 그냥 div -> position:absolute로 처리...
 이거 더 쉽게 하는 방법 있을까요? 힝 */
+
 .main-6--featured .featured-button {
   display: flex;
   justify-content: center;
@@ -505,7 +519,8 @@ z-index: -99;
   color: #fff;
 }
 .main-6--featured .featured-group {
-  display: flex;
+  width: 100%;
+  display: none;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -523,6 +538,13 @@ z-index: -99;
   word-break: keep-all;
   text-align: center;
 }
+.main-6--featured .featured-group {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
 /* 07.CUSTOMER REIVEW */
 .main-7--review {
   position: relative;
@@ -577,10 +599,9 @@ z-index: -99;
 }
 .main-7--review .buttom_left span,.main-7--review .buttom_right span{
   font-size: 42px;
-  background-color: RED;
 }
-.main-7--review .buttom_left { position: absolute; left: -50px; }
-.main-7--review .buttom_right {  position: absolute; right: -50px; }
+.main-7--review .buttom_left { position: absolute; left: -70px; top: 0; bottom: 0; margin: auto; width: 50px; height: 50px; }
+.main-7--review .buttom_right {  position: absolute; right: -70px; top: 0; bottom: 0; margin: auto; width: 50px; height: 50px; }
 /* 월요일 이어서 */
 
 /* KAKAO */
@@ -698,6 +719,12 @@ footer .footer-third .footer-third-logo{
   cursor: pointer;
 
   /* 질문 6 얘 그림자 이상하게 생겨요 ,,, */
+}
+
+.badge {
+visibility: hidden;
+transition: opacity 1s, visibility 1s;
+transition-delay: visibility 0.5s;
 }
 .badge .up-to {
   width: 100%;
