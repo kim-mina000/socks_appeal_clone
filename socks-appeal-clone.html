@@ -3,20 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>socks appeal shop clone</title>
-  <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-  <!-- 스타일 연결 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-  <link rel="stylesheet" href="./css/main.css">
-
-  <!-- 파비콘 -->
-  <link rel="icon" href="./icon.png">
-
-  <!-- js -->
-  <script defer src="./js/script.js"></script>
 
   <!-- 오픈그래프 -->
   <meta property="og:type" content="website" />
@@ -33,16 +19,22 @@
   <meta property="twitter:description" content="좋아하는 다양한 이미지를 양말과 의류 및 소품에 담아 매 시즌 다양한 컬렉션을 펼치는 글로벌 레그웨어 브랜드." />
   <meta property="twitter:image" content="" />
   <meta property="twitter:url" content="https://socksappealshop.com" />
-
-  <!-- 폰트 연결 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" >
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap">
-
-  <!-- 구글 머터리얼 아이콘 -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
   
+  <title>socks appeal shop clone</title>
+  <link rel="icon" href="./icon.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./js/script.js"></script>
+
 </head>
 <body>
   <header>
@@ -53,7 +45,7 @@
           <img src="./img/socks_appeal_logo_large-2_size_color.png" alt="logo" class="top-logo-gray">
         </a>
       </div>
-      <ul class="top-menu">
+      <nav class="top-menu">
         <li><a href="javascript:void(0)">WOMEN</a>
           <ul class="menu-view">
             <li><a href="javascript:void(0)">All</a></li>
@@ -114,7 +106,7 @@
             <li><a href="javascript:void(0)">Story of Us</a></li>
           </ul>
         </li>
-      </ul>
+      </nav>
       <div class="top-user">
         <ul>
           <li class="person">
@@ -174,43 +166,49 @@
     <div class="swiper">
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide"><img src="./img_socks_appeal/main_slide_web_spring_bunny.jpg" alt="main-content-slider-1">
-          <ul class="slide-text_group">
-            <il><h2>MY PETIT SPRING</h2></il>
-            <il><h4>봄의 모습으로 채워보는 나만의 옷장 'my petit spring'</h4></il>
-            <il><h6>설레이는 봄날을 삭스어필과 함께 시작해 보세요</h6></il>
-          </ul>
+        <div class="swiper-slide">
+          <img src="./img_socks_appeal/main_slide_web_spring_bunny.jpg" alt="main-content-slider-1">
+          <div class="slide-text_group">
+            <h2>MY PETIT SPRING</h2>
+            <p>봄의 모습으로 채워보는 나만의 옷장 'my petit spring'</p>
+            <span>설레이는 봄날을 삭스어필과 함께 시작해 보세요</span>
+          </div>
         </div>
-        <div class="swiper-slide"><img src="./img_socks_appeal/main_slide_web_ribbon.jpg" alt="main-content-slider-2">
-          <ul class="slide-text_group">
-            <il><h2>PETIT RIBBON GIRL</h2></il>
-            <il><h4>로맨틱한 소녀 감성 100% 'petit ribbon girl'</h4></il>
-            <il><h6>귀엽고 사랑스러운 리본과 함게 아름다운 봄날을 시작해 보세요</h6></il>
-          </ul>
+        <div class="swiper-slide">
+          <img src="./img_socks_appeal/main_slide_web_ribbon.jpg" alt="main-content-slider-2">
+          <div class="slide-text_group">
+            <h2>PETIT RIBBON GIRL</h2>
+            <p>로맨틱한 소녀 감성 100% 'petit ribbon girl'</p>
+            <span>귀엽고 사랑스러운 리본과 함게 아름다운 봄날을 시작해 보세요</span>
+          </div>
         </div>
-        <div class="swiper-slide"><img src="./img_socks_appeal/main_slide_web_every.jpg" alt="main-content-slider-3">
-          <ul class="slide-text_group">
-            <il><h2>SOCKS FOR EVERYDAY</h2></il>
-            <il><h4>발 끝으로 맞이하는 봄, 24SS OPEN EVENT</h4></il>
-            <il><h6>삭스어필 스탠다드 양말과 함께 화사한 봄날을 시작해 보세요</h6></il>
-          </ul>
+        <div class="swiper-slide">
+          <img src="./img_socks_appeal/main_slide_web_every.jpg" alt="main-content-slider-3">
+          <div class="slide-text_group">
+            <h2>SOCKS FOR EVERYDAY</h2>
+            <p>발 끝으로 맞이하는 봄, 24SS OPEN EVENT</p>
+            <span>삭스어필 스탠다드 양말과 함께 화사한 봄날을 시작해 보세요</span>
+          </div>
         </div>
-        <div class="swiper-slide"><img src="./img_socks_appeal/main_slide_web_BK.jpg" alt="main-content-slider-4">
-          <ul class="slide-text_group">
-            <il><h2>BOOKHOU</h2></il>
-            <il><h4>소박한 봄의 감성을 담은 'HOOKHOU' Collaboration</h4></il>
-            <il><h6>소박하고 따뜻한 봄의 감성을 담은 BOOKHOU콜라보 상품들을 지금 만나보세요.</h6></il>
-          </ul>
+        <div class="swiper-slide">
+          <img src="./img_socks_appeal/main_slide_web_BK.jpg" alt="main-content-slider-4">
+          <div class="slide-text_group">
+            <h2>BOOKHOU</h2>
+            <p>소박한 봄의 감성을 담은 'HOOKHOU' Collaboration</p>
+            <span>소박하고 따뜻한 봄의 감성을 담은 BOOKHOU콜라보 상품들을 지금 만나보세요.</span>
+          </div>
         </div>
-        <div class="swiper-slide"><img src="./img_socks_appeal/main_emoji_web.jpg" alt="main-content-slider-5">
-          <ul class="slide-text_group">
-            <il><h2>EMOJI WEEKS</h2></il>
-            <il><h4>smile together, 함께하면 더욱 쏟아지는 미소</h4></il>
-            <il><h6>더욱 풍성하게 돌아온 24ss 이모지 양말을 만나보세요!</h6></il>
-          </ul>
+        <div class="swiper-slide">
+          <img src="./img_socks_appeal/main_emoji_web.jpg" alt="main-content-slider-5">
+          <div class="slide-text_group">
+            <h2>EMOJI WEEKS</h2>
+            <p>smile together, 함께하면 더욱 쏟아지는 미소</p>
+            <span>더욱 풍성하게 돌아온 24ss 이모지 양말을 만나보세요!</span>
+          </div>
         </div>
     </div>
   </section>
+
   <section class="main-1--recommandetion">
     <div class="inner">
       <div class="recommandetion-button">
@@ -257,104 +255,113 @@
 
   <section class="main-3--weekly">
     <div class="title">
-      <h2>WEEKLY BEST</h2>
+      <h2>WEEKLY BEST</h2> 
     </div>
-    <ul class="weekly-group inner">
-      <li class="weekly-each">
-        <div class="zoom">
-          <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_1.jpg" alt="weeklyBest_1"></a>
-        </div>
-        <ul class="text_group">
-          <li class="wb-title">kids 4pack SET</li>
-          <li class="wb-price">&#8361 40,000</li>
-          <li class="price-sale">&#8361 32,000</li>
-        </ul>
-      </li>
-      <li class="weekly-each">
-        <div class="zoom">
-          <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_2.jpg" alt="weeklyBest_2"></a>
-        </div>
-        <ul class="text_group">
-          <li class="wb-title">baby dino GIFT (12-24months)</li>
-          <li class="wb-price">&#8361 43,000</li>
-          <li class="price-sale">&#8361 34,400</li>
-        </ul>
-      </li>
-      <li class="weekly-each">        
-        <div class="zoom">
-          <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_3.jpg" alt="weeklyBest_3"></a>
-        </div>
-        <ul class="text_group">
-          <li class="wb-title">baby bunny GIFT (0-12 months)</li>
-          <li class="wb-price">&#8361 51,000</li>
-          <li class="price-sale">&#8361 45,900</li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="weekly-group inner">
-      <li class="weekly-each">        
-        <div class="zoom">
-          <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_4.jpg" alt="weeklyBest_4"></a>
-        </div>
-        <ul class="text_group">
-          <li class="wb-title">MEN 3pack GIFT</li>
-          <li class="wb-price">&#8361 42,000</li>
-          <li class="price-sale">&#8361 37,800</li>
-        </ul>
-      </li>
-      <li class="weekly-each">        
-        <div class="zoom">
-          <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_5.jpg" alt="weeklyBest_5"></a>
-        </div>
-        <ul class="text_group">
-          <li class="wb-title">everyday short SET</li>
-          <li class="wb-price">&#8361 30,000</li>
-          <li class="price-sale">&#8361 27,000</li>
-        </ul>
-      </li>
-      <li class="weekly-each">        
-        <div class="zoom">
-          <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_6.jpg" alt="weeklyBest_6"></a>
-        </div>
-        <ul class="text_group">
-          <li class="wb-title">everyday SET</li>
-          <li class="wb-price">&#8361 28,000</li>
-          <li class="price-sale">&#8361 22,400</li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="weekly-group inner">
-      <li class="weekly-each">        
-        <div class="zoom">
-          <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_7.jpg" alt="weeklyBest_7"></a>
-        </div>
-        <ul class="text_group">
-          <li class="wb-title">petit spring 2pack SET</li>
-          <li class="wb-price">&#8361 26,000</li>
-          <li class="price-sale">&#8361 23,400</li>
-        </ul>
-      </li>
-      <li class="weekly-each">        
-        <div class="zoom">
-          <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_8.jpg" alt="weeklyBest_8"></a>
-        </div>
-        <ul class="text_group">
-          <li class="wb-title">RIBBON GIRL 2pack SET</li>
-          <li class="wb-price">&#8361 26,000</li>
-          <li class="price-sale">&#8361 36,000</li>
-        </ul>
-      </li>
-      <li class="weekly-each">        
-        <div class="zoom">
-          <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_9.jpg" alt="weeklyBest_9"></a>
-        </div>
-        <ul class="text_group">
-          <li class="wb-title">WOMEN 3pack SET</li>
-          <li class="wb-price">&#8361 36,000</li>
-          <li class="price-sale">&#8361 28,800</li>
-        </ul>
-      </li>
-    </ul>
+    <div class="inner">        
+      <div class="page-nation">
+        <div class="page-nation-1"></div>
+        <div class="page-nation-2"></div>
+        <div class="page-nation-3"></div>
+      </div> 
+      <ul class="weekly-group">
+        <li class="weekly-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_1.jpg" alt="weeklyBest_1"></a>
+          </div>
+          <ul class="text_group">
+            <li class="wb-title">kids 4pack SET</li>
+            <li class="wb-price">&#8361 40,000</li>
+            <li class="price-sale">&#8361 32,000</li>
+          </ul>
+        </li>
+        <li class="weekly-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_2.jpg" alt="weeklyBest_2"></a>
+          </div>
+          <ul class="text_group">
+            <li class="wb-title">baby dino GIFT (12-24months)</li>
+            <li class="wb-price">&#8361 43,000</li>
+            <li class="price-sale">&#8361 34,400</li>
+          </ul>
+        </li>
+        <li class="weekly-each">        
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_3.jpg" alt="weeklyBest_3"></a>
+          </div>
+          <ul class="text_group">
+            <li class="wb-title">baby bunny GIFT (0-12 months)</li>
+            <li class="wb-price">&#8361 51,000</li>
+            <li class="price-sale">&#8361 45,900</li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="weekly-group">
+        <li class="weekly-each">        
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_4.jpg" alt="weeklyBest_4"></a>
+          </div>
+          <ul class="text_group">
+            <li class="wb-title">MEN 3pack GIFT</li>
+            <li class="wb-price">&#8361 42,000</li>
+            <li class="price-sale">&#8361 37,800</li>
+          </ul>
+        </li>
+        <li class="weekly-each">        
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_5.jpg" alt="weeklyBest_5"></a>
+          </div>
+          <ul class="text_group">
+            <li class="wb-title">everyday short SET</li>
+            <li class="wb-price">&#8361 30,000</li>
+            <li class="price-sale">&#8361 27,000</li>
+          </ul>
+        </li>
+        <li class="weekly-each">        
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_6.jpg" alt="weeklyBest_6"></a>
+          </div>
+          <ul class="text_group">
+            <li class="wb-title">everyday SET</li>
+            <li class="wb-price">&#8361 28,000</li>
+            <li class="price-sale">&#8361 22,400</li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="weekly-group">
+        <li class="weekly-each">        
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_7.jpg" alt="weeklyBest_7"></a>
+          </div>
+          <ul class="text_group">
+            <li class="wb-title">petit spring 2pack SET</li>
+            <li class="wb-price">&#8361 26,000</li>
+            <li class="price-sale">&#8361 23,400</li>
+          </ul>
+        </li>
+        <li class="weekly-each">        
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_8.jpg" alt="weeklyBest_8"></a>
+          </div>
+          <ul class="text_group">
+            <li class="wb-title">RIBBON GIRL 2pack SET</li>
+            <li class="wb-price">&#8361 26,000</li>
+            <li class="price-sale">&#8361 36,000</li>
+          </ul>
+        </li>
+        <li class="weekly-each">        
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/weeklyBest_9.jpg" alt="weeklyBest_9"></a>
+          </div>
+          <ul class="text_group">
+            <li class="wb-title">WOMEN 3pack SET</li>
+            <li class="wb-price">&#8361 36,000</li>
+            <li class="price-sale">&#8361 28,800</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="weekly-btn--r"><span class="material-icons">arrow_back</span><span class="material-icons">arrow_back</span></div>
+      <div class="weekly-btn--l"><span class="material-icons">arrow_forward</span><span class="material-icons">arrow_forward</span></div>
+    </div>
   </section>
 
   <section class="main-4--new-arrival">
@@ -769,7 +776,7 @@
       <li class="featured-each">
         <div class="zoom">
           <a href="javasctript:void(0)"><img src="./img_socks_appeal/featured-daily (7).jpg" alt="featured-STANDAR-img-5"></a>
-          <span class="material-icons">search</span>
+          <!-- <span class="material-icons">search</span> -->
         </div>
         <ul class="text-group">
           <li class="wb-title">cable long white</li>
@@ -862,7 +869,6 @@
       <li class="featured-each">
         <div class="zoom">
           <a href="javasctript:void(0)"><img src="./img_socks_appeal/featured-kid (5).jpg" alt="featured-KIDSBABY-img-5"></a>
-          <span class="material-icons">search</span>
         </div>
         <ul class="text-group">
           <li class="wb-title">baby bunny hug</li>
@@ -923,88 +929,72 @@
       <h2>COUSTOM REVIEW</h2>
     </div>
     <div class="inner">
-      <div class="review-group">
-        <ul class="review-each">
-          <li>
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (3).jpg" alt="socks-appeal-reviw-1"></a>
-            </div>
-          </li>
-          <li class="rv-title">만족</li>
-          <li class="rv-description">ㅁㅇㄻㅇㄻ</li>
-          <li class="rv-date"><span>2024-03-15 15:39</span>ㅁㄴㄹㅇㅁㄹㄴㅇ</li>
-        </ul>
-        <ul class="review-each">
-          <li>
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (6).jpg" alt="socks-appeal-reviw-2"></a>
-            </div>
-          </li>
-          <li class="rv-title">만족</li>
-          <li class="rv-description"></li>
-          <li class="rv-date"></li>
-        </ul>
-        <ul class="review-each">
-          <li>
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (8).jpg" alt="socks-appeal-reviw-3"></a>
-            </div>
-          </li>
-          <li class="rv-title">만족</li>
-          <li class="rv-description"></li>
-          <li class="rv-date"></li>
-        </ul>
-        <ul class="review-each">
-          <li>
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (7).jpg" alt="socks-appeal-reviw-4"></a>
-            </div>
-          </li>
-          <li class="rv-title">만족</li>
-          <li class="rv-description"></li>
-          <li class="rv-date"></li>
-        </ul>
-        <ul class="review-each">
-          <li>
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (5).jpg" alt="socks-appeal-reviw-5"></a>
-            </div>
-          </li>
-          <li class="rv-title">만족</li>
-          <li class="rv-description"></li>
-          <li class="rv-date"></li>
-        </ul>
-        <ul class="review-each">
-          <li>
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (9).jpg" alt="socks-appeal-reviw-6"></a>
-            </div>
-          </li>
-          <li class="rv-title">만족</li>
-          <li class="rv-description"></li>
-          <li class="rv-date"></li>
-        </ul>
-        <ul class="review-each">
-          <li>
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (4).jpg" alt="socks-appeal-reviw-7"></a>
-            </div>
-          </li>
-          <li class="rv-title">만족</li>
-          <li class="rv-description"></li>
-          <li class="rv-date"></li>
-        </ul>
-        <ul class="review-each">
-          <li>
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review.jpg" alt="socks-appeal-reviw-8"></a>
-            </div>
-          </li>
-          <li class="rv-title">만족</li>
-          <li class="rv-description"></li>
-          <li class="rv-date"></li>
-        </ul>
-      </div>
+      <ul class="review-group">
+        <li class="review-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (3).jpg" alt="socks-appeal-reviw-1"></a>
+          </div>
+          <p class="rv-title">만족</p>
+          <p class="rv-description">ㅁㅇㄻㅇㄻ</p>
+          <p class="rv-date"><span>2024-03-15 15:39</span>ㅁㄴㄹㅇㅁㄹㄴㅇ</p>
+        </li>
+        <li class="review-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (6).jpg" alt="socks-appeal-reviw-2"></a>
+          </div>
+          <p class="rv-title">만족</p>
+          <p class="rv-description"></p>
+          <p class="rv-date"><span></span></p>
+        </li>
+        <li class="review-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (8).jpg" alt="socks-appeal-reviw-3"></a>
+          </div>
+          <p class="rv-title">만족</p>
+          <p class="rv-description"></p>
+          <p class="rv-date"><span></span></p>
+        </li>
+        <li class="review-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (7).jpg" alt="socks-appeal-reviw-4"></a>
+          </div>
+          <p class="rv-title">만족</p>
+          <p class="rv-description"></p>
+          <p class="rv-date"><span></span></p>
+        </li>
+        <li class="review-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (5).jpg" alt="socks-appeal-reviw-5"></a>
+          </div>
+          <p class="rv-title">만족</p>
+          <p class="rv-description"></p>
+          <p class="rv-date"><span></span></p>
+        </li>
+        <li class="review-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (9).jpg" alt="socks-appeal-reviw-6"></a>
+          </div>
+          <p class="rv-title">만족</p>
+          <p class="rv-description"></p>
+          <p class="rv-date"><span></span></p>
+        </li>
+        <li class="review-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (4).jpg" alt="socks-appeal-reviw-7"></a>
+          </div>
+          <p class="rv-title">만족</p>
+          <p class="rv-description"></p>
+          <p class="rv-date"><span></span></p>
+        </li>
+        <li class="review-each">
+          <div class="zoom">
+            <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review.jpg" alt="socks-appeal-reviw-8"></a>
+          </div>
+          <p class="rv-title">만족</p>
+          <p class="rv-description"></p>
+          <p class="rv-date"><span></span></p>
+        </li>
+      </ul>
       <a href="javascript:void(0)" class="buttom_left"><span class="material-icons">arrow_back</span></a>
       <a href="javascript:void(0)" class="buttom_right"><span class="material-icons">arrow_forward</span></a>
     </div>

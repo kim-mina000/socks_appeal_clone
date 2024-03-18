@@ -96,6 +96,7 @@ const featuredGroupEls = document.querySelectorAll('.featured-group');
   //     featuredGroupEl[1].style.display = 'block'; <- 질문 7 이게 안되용,,, 
   //   });
   // });
+  // forEach로 배열 사용 불가능하다는것을 깨달았습니다 
   featuredBtnEls.forEach((featuredBtnEl,index) => {
     featuredGroupEls[0].style.display = 'flex';
   featuredBtnEls[index].addEventListener('mouseenter', () => {
@@ -110,5 +111,15 @@ const featuredGroupEls = document.querySelectorAll('.featured-group');
 // COUSTOM REVIEW 버튼 눌러 슬라이드
 const reviewBtnL = document.querySelector('.buttom_left');
 const reviewBtnR = document.querySelector('.buttom_right');
-const reviewPage = document.querySelectorAll('.review-each');
-
+const reviewPage = document.querySelector('.review-group');
+// const reviewPage = document.querySelectorAll('.review-each');
+let reviewCounter = 1;
+// reviewBtnL.addEventListener('click',()=>{
+//   // reviewPage.style = 'transform: translateX(-300px)';
+//   reviewCounter++;
+//   reviewPage.forEach(function (reviewEach) {
+//     reviewEach.style=`transform: translateX(${-reviewCounter*300}px)`;
+//   });
+// })
+// 굳이 querySelectorAll으로 모두 선택해 올 필요x 전체를 하나로 묶은 다음 끌어와도 됨
+// 위의 코드는 forEach를 안써서 안돌아갔음
