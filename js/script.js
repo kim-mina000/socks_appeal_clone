@@ -10,6 +10,17 @@ logoPlace.addEventListener('mouseleave',function () {
   logoPlace.querySelector('.top-logo').style.opacity=1;
 });
 
+// scroll시 h3 transform 샤샥
+const slideTextGroup = document.querySelector('.slide-text_group');
+slideTextGroup.classList.remove('text-group-effect');
+window.addEventListener('scroll', ()=>{
+  if (this.window.scrollY > 100) {
+    slideTextGroup.classList.add('text-group-effect');
+  } else {
+    slideTextGroup.classList.remove('text-group-effect');
+  }
+});
+
 // top-menu 중 user
 
 document.querySelector('.top-user .person').addEventListener('mouseleave', function () {
@@ -105,15 +116,24 @@ const featuredGroupEls = document.querySelectorAll('.featured-group');
       featuredGroupEls[index].style.display = 'flex';
     });
   });
-
 });
 
 // COUSTOM REVIEW 버튼 눌러 슬라이드
 const reviewBtnL = document.querySelector('.buttom_left');
 const reviewBtnR = document.querySelector('.buttom_right');
 const reviewPage = document.querySelector('.review-group');
-// const reviewPage = document.querySelectorAll('.review-each');
+const reviewPageEach = reviewPage.querySelectorAll('.review-each');
 let reviewCounter = 1;
+const slideLen = (290*8) + (15*7);
+const slideWidth = 307.5;
+
+// let lastChild = reviewPage.lastElementChild;
+// let firstChild = reviewPage.firstElementChild;
+let lastChild = reviewPage.lastElementChild.cloneNode(true);
+let firstChildClone = reviewPage.firstElementChild.cloneNode(true);
+let firstChild = reviewPage.firstElementChild;
+
+
 // reviewBtnL.addEventListener('click',()=>{
 //   // reviewPage.style = 'transform: translateX(-300px)';
 //   reviewCounter++;
@@ -123,3 +143,111 @@ let reviewCounter = 1;
 // })
 // 굳이 querySelectorAll으로 모두 선택해 올 필요x 전체를 하나로 묶은 다음 끌어와도 됨
 // 위의 코드는 forEach를 안써서 안돌아갔음
+
+// WEEKLY BEST 페이지네이션 구현
+//  1) 페이지네이션 버튼 눌렀을때 이동
+
+setInterval(()=>{
+  let firstChildClone = reviewPage.firstElementChild.cloneNode(true);
+  let firstChild = reviewPage.firstElementChild;
+  reviewBtnR.addEventListener('click',()=>{
+    console.log('click_r');
+  
+    reviewPage.appendChild(firstChildClone); 
+    reviewPage.removeChild(firstChild);
+  });
+
+  reviewPage.appendChild(firstChildClone); 
+  reviewPage.removeChild(firstChild);
+
+
+  reviewBtnL.addEventListener('click',()=>{
+  });
+  if ( 0 < reviewCounter && reviewCounter <= 8 ) {
+    console.log(reviewCounter);
+    reviewPage.style = `transform : translateX(-${slideWidth*reviewCounter}px)`
+    reviewCounter++;
+  } else if ( reviewCounter < 0 ) { 
+    reviewCounter = 0;
+    reviewPage.style = `transform : translateX(${slideWidth*reviewCounter})`
+  } else if ( reviewCounter = 9 ) {
+    reviewCounter = 1;
+    reviewPage.style = `transform : translateX(0px)`
+  }
+},3000);
+//clearInterval()
+
+
+const weeklyGroupStyle = document.querySelector('.weekly-group');
+const pageNation = document.querySelectorAll('.page-nation-btn');
+let weeklyIndex = 0;
+
+function pageNationBtn(index) {
+  // pageNation.style = 'background-color : #999';
+  pageNation[0].style = 'background-color : #999';
+  pageNation[1].style = 'background-color : #999';
+  pageNation[2].style = 'background-color : #999';
+  pageNation[index].style = 'background-color : black';
+}
+
+pageNation.forEach((pageNationEl, indexPN)=>{
+  pageNation[0].style = 'background-color : black';
+  pageNation[indexPN].addEventListener('click', ()=>{
+    weeklyIndex = indexPN;
+    if (indexPN == 0) {
+      weeklyGroupStyle.style = `transform : translateX(0)`;
+      pageNationBtn(0);
+    } else if (indexPN == 1) {
+      weeklyGroupStyle.style = `transform : translateX(-1215px)`; 
+      pageNationBtn(1);
+    } else if (indexPN == 2){
+      weeklyGroupStyle.style = `transform : translateX(-2430px)`;
+      pageNationBtn(2);
+    }
+  });
+});
+
+//  2) 좌우버튼 눌렀을때
+const weeklyBtnL = document.querySelector('.weekly-btn--r');
+const weeklyBtnR = document.querySelector('.weekly-btn--l');
+
+weeklyBtnL.addEventListener('click',()=>{
+  if ( weeklyIndex == 0 ) {
+    weeklyGroupStyle.style = `transform : translateX(-2430px)`;
+    weeklyIndex = 2;
+    pageNationBtn(2);
+
+  } else if (weeklyIndex == 1) {
+    weeklyGroupStyle.style = `transform : translateX(0)`;
+    weeklyIndex = 0;
+    pageNationBtn(0);
+
+  } else if (weeklyIndex == 2) {
+    weeklyGroupStyle.style = `transform : translateX(-1215px)`; 
+    weeklyIndex = 1;
+    pageNationBtn(1);
+  }
+});
+weeklyBtnR.addEventListener('click',()=>{
+  if ( weeklyIndex == 0 ) {
+    weeklyGroupStyle.style = `transform : translateX(-1215px)`; 
+    weeklyIndex = 1;
+    pageNationBtn(1);
+
+  } else if ( weeklyIndex == 1 ) {
+    weeklyGroupStyle.style = `transform : translateX(-2430px)`;
+    weeklyIndex = 2;
+    pageNationBtn(2);
+
+  } else if ( weeklyIndex == 2 ) {
+    weeklyGroupStyle.style = `transform : translateX(0)`;
+    weeklyIndex = 0;
+    pageNationBtn(0);
+  }
+});
+
+// const menuList = document.querySelector();
+// const menuViewMobile = document.querySelector('.menu-view');
+// function mobileMenu() {
+  
+// }

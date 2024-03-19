@@ -159,6 +159,26 @@ header .top-menu .menu-view>li>a:hover{
   padding-left: 7px;
 }
 
+header .top-menu-moblile {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffc0;
+  position: absolute;
+  top:130px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 180%;
+  transition: 1s;
+}
+header .top-menu-moblile .menu-view{
+  height: 0px;
+  visibility: hidden;
+}
+
+
 header .top-user>ul {
   display: flex;
 }
@@ -231,6 +251,10 @@ z-index: -9;
 .slider-container .swiper-slide>img {
   width: 100%;
 }
+.slider-container .swiper-slide .slide-text_group.text-group-effect {
+  transform: translateX(-30%);
+  opacity: 0;
+}
 .slider-container .swiper-slide .slide-text_group {
   color: white;
   display: flex;
@@ -246,7 +270,9 @@ z-index: -9;
   font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
   /* 질문3 얘 왜 자꾸 아래로 꺼질까요,, */
   /* 왜인지 모르겠는데 해결됨 ,,, 아마 slider 포지션을 fixed가 아니라 absolute로 바꿔서 그런것같음 */
-
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 1s, opacity 1s;
 }
 
 .slider-container .swiper-slide .slide-text_group h2 {
@@ -430,38 +456,43 @@ z-index: -9;
 .title h2 {
   font-size: 26px;
 }
-.main-3--weekly .weekly-group {
-  display: flex;
-  justify-content: space-between;
-
+.main-3--weekly .weekly-container {
   width: 100%;
   height: 500px;
+  position: relative;  
   overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
 }
-.main-3--weekly .weekly-group .weekly-each .zoom {
+.main-3--weekly .weekly-container .weekly-group {
+  width: calc((390*8)+(15*7));
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+  transform: translateX(0);
+  /* -1215  -2430*/
+  transition: transform 1s;
+  
+}
+.main-3--weekly .weekly-each .zoom {
   width: 390px;
   height: 390px;
 }
-.main-3--weekly .weekly-group .weekly-each img {
+.main-3--weekly .weekly-each img {
   width: 100%;
 }
 /* page nation */
-.main-3--weekly .page-nation {
+.main-3--weekly .page-nation-group {
   display: flex;
   column-gap: 10px;
   position: absolute;
   top: -40px;
   right: 0;
 }
-.main-3--weekly .page-nation div {
+.main-3--weekly .page-nation-group .page-nation-btn {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: #999;
+  cursor: pointer;
 }
 /* 좌우버튼 구현 */
 .main-3--weekly .weekly-btn--r, .main-3--weekly .weekly-btn--l {
@@ -545,7 +576,7 @@ right: -25px;
   position: relative;
   width: 100%;
   height: 1050px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 /* .main-6--featured .title {
   position: relative;
@@ -614,21 +645,24 @@ right: -25px;
 .main-7--review {
   width: 100%;
 }
-
-.main-7--review .review-group {
+.main-7--review .review-container {
   width: 100%;
   height: 530px;
   /* overflow: hidden; */
+}
+.main-7--review .review-group {
+
   display: flex;
   transition: transform 1s;
+  /* 질문 8 여기에 이 값을 넣는게 맞는데 ,,,, ->해결~*/
+  transform: translateX(0);
 }
 .main-7--review .review-group .review-each {
   position: relative;
   width: 25%;
   height: 450px;
   box-sizing: border-box;
-  /* 질문 8 여기에 이 값을 넣는게 맞는데 ,,,, */
-  /* transform: translateX(-300px); */
+
 }
 .main-7--review .review-group .review-each + .review-each {
   margin-left: 30px;
@@ -641,7 +675,6 @@ right: -25px;
   width: 1px;
   height: 100%;
   background-color: #88888818;
-  /* border: 1px solid red; */
   content: "";
   position: absolute;
   right: -15px;
@@ -831,4 +864,50 @@ transition-delay: visibility 0.5s;
   height: 1;
   background-color: red;
   position: absolute;
+}
+
+/* media */
+@media screen and (width < 1279px) {
+  .top-contents .top-user {
+    display: none;}
+  .inner {
+    width: 80%;
+  }
+  .slider-container .slide-text_group {
+    font-size: 70%;
+    top: 60%;
+  }
+
+  .main-1--recommandetion .recommandetion-generation .men-kids-wrap {
+    display: none;
+  }
+  .main-1--recommandetion .recommandetion-button a {
+    font-size: 70%;
+  }
+  .main-2--event .event-div{
+    flex: 1;
+  }
+  .main-2--event .event-div img {
+    width: 100%;
+  }
+
+  .main-3--weekly .weekly-container {
+    width: 805px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .main-4--new-arrival .new-arrival-group {
+    justify-content: center;
+    column-gap: 15px;
+  }
+
+  .main-7--review .review-each {
+    width: 200px;
+  }
+}
+@media screen and (max-width:479px) {
+  header .top-menu {
+    display: none;
+  }
 }
