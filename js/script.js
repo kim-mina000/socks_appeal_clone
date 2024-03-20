@@ -78,9 +78,10 @@ badgeUp.addEventListener('click', function () {
   }
 });
 badgeDown.addEventListener('click', function () {
-  window.scrollTo({ top:9200, behavior:"smooth"});
+  // window.scrollTo({ top:9200, behavior:"smooth"});
+  window.scrollTo({ top:document.body.scrollHeight, behavior:"smooth"});
 });
-// 질문 7 scrollTo bottom같은건 왜 없을까요 .. 이게 최선의 방법일까요...?
+// 질문 7 scrollTo bottom같은건 왜 없을까요 .. 이게 최선의 방법일까요...? ->document.body.scrollHeight
 
 // HEADER scroll내릴시 고정
 // HEADER scroll내릴시 top-logo scale 변환
@@ -118,20 +119,62 @@ const featuredGroupEls = document.querySelectorAll('.featured-group');
   });
 });
 
-// COUSTOM REVIEW 버튼 눌러 슬라이드
+// // COUSTOM REVIEW 버튼 눌러 슬라이드
+new Swiper('.main-7--review .swiper',{
+  direction: 'horizontal', //수직슬라이드 <-> 수평:horizental
+  loop: true, //반복재생여부
+  autoplay: {
+   delay: 3000, //5초마다 슬라이드 바뀜 (기본값 3000)
+   disableOnInteraction: false //마우스 눌러도 정지x
+  }, 
+  slidesPerView:5, //한 번에 보여줄 슬라이드 개수 (기본값 1)
+  spaceBetween:30, // 슬라이드 사이 여백(간격)
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  navigation: { // 슬라이드의 이전/다음 버튼사용
+    nextEl: '.awards .swiper-button-next',
+    prevEl: '.awards .swiper-button-prev',
+  }
+});
 const reviewBtnL = document.querySelector('.buttom_left');
 const reviewBtnR = document.querySelector('.buttom_right');
-const reviewPage = document.querySelector('.review-group');
-const reviewPageEach = reviewPage.querySelectorAll('.review-each');
-let reviewCounter = 1;
-const slideLen = (290*8) + (15*7);
-const slideWidth = 307.5;
+
+const reviewPage = document.querySelector('.review-group');  //리뷰묶음
+const reviewPageEach = reviewPage.querySelectorAll('.review-each');  //리뷰각각
+const firstSlide = reviewPage.querySelector('.review-each:first-child'); //첫번째 슬라이드
+const lastSlide = reviewPage.querySelector('.review-each:last-child'); //마지막 슬라이드
+const firstChild = reviewPage.firstElementChild;
 
 // let lastChild = reviewPage.lastElementChild;
 // let firstChild = reviewPage.firstElementChild;
-let lastChild = reviewPage.lastElementChild.cloneNode(true);
-let firstChildClone = reviewPage.firstElementChild.cloneNode(true);
-let firstChild = reviewPage.firstElementChild;
+
+// let reviewCounter = 0;
+// // const slideLen = (290*8) + (15*7);
+// const slideLen = reviewPageEach.length;
+// const slideWidth = 305;
+const firstChildClone = reviewPage.firstElementChild.cloneNode(true); //첫번째슬라이드 클론
+const lastChildClone = reviewPage.lastElementChild.cloneNode(true); //마지막슬라이드 클론
+// reviewPage.appendChild(firstChildClone);
+// reviewPage.insertBefore(lastChildClone,firstSlide); // 첫번째 슬라이드 앞에 마지막 슬라이드 붙이기  
+
+// reviewPage.style.transform = `translateX(-${slideWidth}px)`;
+// let postX = 0;
+
+// setInterval(()=>{
+//   if (reviewCounter <= slideLen -1 ) {
+//     postX = -slideWidth*(reviewCounter+2);
+//     reviewPage.style.transition = '0.3s';
+//   }
+//   if (reviewCounter == slideLen){
+//     postX = -slideWidth;
+//     reviewCounter = -1;
+//   }
+//   reviewPage.style.transform = `translateX(${postX}px)`;
+//   reviewCounter++;
+//   setTimeout(()=>{
+//     reviewPage.style.transition = '0s';
+//   },300);
+// },1000);
+
 
 
 // reviewBtnL.addEventListener('click',()=>{
@@ -147,36 +190,45 @@ let firstChild = reviewPage.firstElementChild;
 // WEEKLY BEST 페이지네이션 구현
 //  1) 페이지네이션 버튼 눌렀을때 이동
 
+
 setInterval(()=>{
+  // 방법1. 첫번째 자식을 맨 뒤로 보내고 첫번째 자식을 없애는 방법
   let firstChildClone = reviewPage.firstElementChild.cloneNode(true);
   let firstChild = reviewPage.firstElementChild;
-  reviewBtnR.addEventListener('click',()=>{
-    console.log('click_r');
-  
-    reviewPage.appendChild(firstChildClone); 
-    reviewPage.removeChild(firstChild);
-  });
-
   reviewPage.appendChild(firstChildClone); 
   reviewPage.removeChild(firstChild);
+  
 
-
-  reviewBtnL.addEventListener('click',()=>{
-  });
-  if ( 0 < reviewCounter && reviewCounter <= 8 ) {
-    console.log(reviewCounter);
-    reviewPage.style = `transform : translateX(-${slideWidth*reviewCounter}px)`
-    reviewCounter++;
-  } else if ( reviewCounter < 0 ) { 
-    reviewCounter = 0;
-    reviewPage.style = `transform : translateX(${slideWidth*reviewCounter})`
-  } else if ( reviewCounter = 9 ) {
-    reviewCounter = 1;
-    reviewPage.style = `transform : translateX(0px)`
-  }
+  // translateX 값을 조종하는 방법
+  // reviewBtnL.addEventListener('click',()=>{
+  // });
+//   if ( 0 < reviewCounter && reviewCounter <= 8 ) {
+//     console.log(reviewCounter);
+//     reviewPage.style = `transform : translateX(-${slideWidth*reviewCounter}px)`
+//     reviewCounter++;
+//   } else if ( reviewCounter < 0 ) { 
+//     reviewCounter = 0;
+//     reviewPage.style = `transform : translateX(${slideWidth*reviewCounter})`
+//   } else if ( reviewCounter = 9 ) {
+//     reviewCounter = 1;
+//     reviewPage.style = `transform : translateX(0px)`
+//   }
 },3000);
 //clearInterval()
+reviewBtnR.addEventListener('click',()=>{
+  console.log('click_r');
+  let lastChild = reviewPage.lastElementChild;
 
+  reviewPage.insertBefore(lastChild,reviewPage.children[0]);
+
+});
+reviewBtnL.addEventListener('click',()=>{
+  console.log('click_l');
+  // let firstChildClone = reviewPage.firstElementChild.cloneNode(true);
+  let firstChild = reviewPage.firstElementChild;
+  reviewPage.appendChild(firstChild); 
+  // reviewPage.removeChild(firstChildClone);
+});
 
 const weeklyGroupStyle = document.querySelector('.weekly-group');
 const pageNation = document.querySelectorAll('.page-nation-btn');
@@ -246,8 +298,15 @@ weeklyBtnR.addEventListener('click',()=>{
   }
 });
 
-// const menuList = document.querySelector();
-// const menuViewMobile = document.querySelector('.menu-view');
-// function mobileMenu() {
-  
-// }
+
+// 모바일 메뉴 x 누르면 클로즈
+// 질문 9... onclick이벤트로 숨김처리했는데 이후에 다시 top-menu-moblile이 안떠요,,
+const topMenuMoblile = document.querySelector('.top-menu-moblile');
+function menuClose() {
+  document.querySelector('header').style = 'height:auto';
+  topMenuMoblile.style.display = 'none';
+}
+function menuOpen() {
+  document.querySelector('header').style = 'height:100%';
+  topMenuMoblile.style.display = 'block';
+}

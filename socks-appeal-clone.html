@@ -39,7 +39,7 @@
 <body>
   <header>
     <div class="top-contents">
-      <div class="logo-place">
+      <div onclick="menuOpen()" class="logo-place">
         <a href="#">
           <img src="./img/socks_appeal_logo_large-2_size.png" alt="logo" class="top-logo ">
           <img src="./img/socks_appeal_logo_large-2_size_color.png" alt="logo" class="top-logo-gray">
@@ -139,7 +139,8 @@
         </ul>
       </div>
       <nav class="top-menu-moblile">
-        <li><a href="javascript:void(0)" onclick="mobileMenu()">WOMEN</a>
+        <span class="material-icons" onclick="menuClose()">close</span>
+        <li><a href="javascript:void(0)">WOMEN</a>
           <ul class="menu-view">
             <li><a href="javascript:void(0)">All</a></li>
             <li><a href="javascript:void(0)">Crew Socks</a></li>
@@ -154,7 +155,7 @@
           </ul>
         </li>
         <li><a href="javascript:void(0)">MEN</a>
-          <ul class="menu-view">
+          <ul class="menu-view display">
             <li><a href="javascript:void(0)">All</a></li>
             <li><a href="javascript:void(0)">Crew Socks</a></li>
             <li><a href="javascript:void(0)">Summer Socks</a></li>
@@ -999,71 +1000,165 @@
               <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (3).jpg" alt="socks-appeal-reviw-1"></a>
             </div>
             <p class="rv-title">만족</p>
-            <p class="rv-description">ㅁㅇㄻㅇㄻ</p>
+            <p class="rv-description">1번후기</p>
             <p class="rv-date"><span>2024-03-15 15:39</span>ㅁㄴㄹㅇㅁㄹㄴㅇ</p>
           </li>
           <li class="review-each">
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (6).jpg" alt="socks-appeal-reviw-2"></a>
-            </div>
-            <p class="rv-title">만족</p>
-            <p class="rv-description"></p>
-            <p class="rv-date"><span></span></p>
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (6).jpg" alt="socks-appeal-reviw-2"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description">2번후기</p>
+              <p class="rv-date"><span></span></p>
           </li>
           <li class="review-each">
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (8).jpg" alt="socks-appeal-reviw-3"></a>
-            </div>
-            <p class="rv-title">만족</p>
-            <p class="rv-description"></p>
-            <p class="rv-date"><span></span></p>
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (8).jpg" alt="socks-appeal-reviw-3"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description">3번후기</p>
+              <p class="rv-date"><span></span></p>
           </li>
           <li class="review-each">
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (7).jpg" alt="socks-appeal-reviw-4"></a>
-            </div>
-            <p class="rv-title">만족</p>
-            <p class="rv-description"></p>
-            <p class="rv-date"><span></span></p>
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (7).jpg" alt="socks-appeal-reviw-4"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description">4번후기</p>
+              <p class="rv-date"><span></span></p>
           </li>
           <li class="review-each">
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (5).jpg" alt="socks-appeal-reviw-5"></a>
-            </div>
-            <p class="rv-title">만족</p>
-            <p class="rv-description"></p>
-            <p class="rv-date"><span></span></p>
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (5).jpg" alt="socks-appeal-reviw-5"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description">5번후기</p>
+              <p class="rv-date"><span></span></p>
           </li>
           <li class="review-each">
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (9).jpg" alt="socks-appeal-reviw-6"></a>
-            </div>
-            <p class="rv-title">만족</p>
-            <p class="rv-description"></p>
-            <p class="rv-date"><span></span></p>
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (9).jpg" alt="socks-appeal-reviw-6"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description">6번후기</p>
+              <p class="rv-date"><span></span></p>
           </li>
           <li class="review-each">
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (4).jpg" alt="socks-appeal-reviw-7"></a>
-            </div>
-            <p class="rv-title">만족</p>
-            <p class="rv-description"></p>
-            <p class="rv-date"><span></span></p>
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (4).jpg" alt="socks-appeal-reviw-7"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description">7번후기</p>
+              <p class="rv-date"><span></span></p>
           </li>
           <li class="review-each">
-            <div class="zoom">
-              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review.jpg" alt="socks-appeal-reviw-8"></a>
-            </div>
-            <p class="rv-title">만족</p>
-            <p class="rv-description"></p>
-            <p class="rv-date"><span></span></p>
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review.jpg" alt="socks-appeal-reviw-8"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description">8번후기</p>
+              <p class="rv-date"><span></span></p>
           </li>
         </ul>
       </div>
+      <!-- <div class="swiper review-container"> -->
+        <!-- Additional required wrapper -->
+        <!-- <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="zoom">
+              <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (3).jpg" alt="socks-appeal-reviw-1"></a>
+            </div>
+            <p class="rv-title">만족</p>
+            <p class="rv-description">ㅁㅇㄻㅇㄻ</p>
+            <p class="rv-date"><span>2024-03-15 15:39</span>ㅁㄴㄹㅇㅁㄹㄴㅇ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-each">
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (6).jpg" alt="socks-appeal-reviw-2"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description"></p>
+              <p class="rv-date"><span></span></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-each">
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (7).jpg" alt="socks-appeal-reviw-4"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description"></p>
+              <p class="rv-date"><span></span></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-each">
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (8).jpg" alt="socks-appeal-reviw-3"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description"></p>
+              <p class="rv-date"><span></span></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-each">
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review.jpg" alt="socks-appeal-reviw-8"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description"></p>
+              <p class="rv-date"><span></span></p>
+            </di>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-each">
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (5).jpg" alt="socks-appeal-reviw-5"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description"></p>
+              <p class="rv-date"><span></span></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-each">
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (9).jpg" alt="socks-appeal-reviw-6"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description"></p>
+              <p class="rv-date"><span></span></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-each">
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (4).jpg" alt="socks-appeal-reviw-7"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description"></p>
+              <p class="rv-date"><span></span></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-each">
+              <div class="zoom">
+                <a href="javascript:void(0)"><img src="./img_socks_appeal/coustom-review (4).jpg" alt="socks-appeal-reviw-7"></a>
+              </div>
+              <p class="rv-title">만족</p>
+              <p class="rv-description"></p>
+              <p class="rv-date"><span></span></p>
+            </div>
+          </div>
+        </div> 
+        <div class="swiper-button-prev"><a href="javascript:void(0)" class="buttom_left"><span class="material-icons">arrow_back</span></a></div>
+        <div class="swiper-button-next"><a href="javascript:void(0)" class="buttom_left"><span class="material-icons">arrow_back</span></a></div>
+      </div>-->
       <a href="javascript:void(0)" class="buttom_left"><span class="material-icons">arrow_back</span></a>
       <a href="javascript:void(0)" class="buttom_right"><span class="material-icons">arrow_forward</span></a>
     </div>
-    
   </section>
 
   <!-- KAKAO TALK -->
