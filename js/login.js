@@ -14,7 +14,6 @@ logoPlace.addEventListener('mouseleave',function () {
 // SIGN UP - ID
 const userId = document.querySelector('#user-id');
 const userIdAdd = document.querySelector('#user-id-add');
-console.log(userIdAdd.innerText);
 
 userId.addEventListener('blur',()=>{
   console.log(userId.value);
@@ -23,11 +22,25 @@ userId.addEventListener('blur',()=>{
   console.log(userId.value.length);
   if ( userId.value.length == 0 ){
     userIdAdd.innerText = '아이디를 입력해 주세요.';
+    userIdAdd.style.color = 'red';
   } else if ( isNaN(userId.value) != true || userId.value.length > 17 || userId.value.length < 4 ){ 
     userIdAdd.innerText = '아이디는 영문소문자 또는 숫자 4~16자로 입력해 주세요.';
+    userIdAdd.style.color = 'red';
   } else {
     userIdAdd.innerText = `${userId.value}는 사용 가능한 아이디 입니다.`;
     userIdAdd.style.color = 'black';
+  }
+});
+
+// 비밀번호 확인
+const userPassword = document.querySelector('#user-password');
+const userPasswordCheck = document.querySelector('#user-password-2');
+
+userPasswordCheck.addEventListener('blur',()=>{
+  if( userPassword.value !== userPasswordCheck.value ){
+    document.querySelector('#user-password-check').innerText = '비밀번호가 일치하지 않습니다.';
+  } else if ( userPassword.value === userPasswordCheck.value ) {
+    document.querySelector('#user-password-check').innerText = '';
   }
 });
 
@@ -62,7 +75,5 @@ agreeSecond.addEventListener('click',()=>{
 });
 
 // 전체 동의 안했을때 알림창 띄우기
-const userPassword = document.querySelector('#user-password');
-const userPasswordCheck = document.querySelector('#user-password-2');
 const userName = document.querySelector('#user-name');
 const userEmail = document.querySelector('#user-email');

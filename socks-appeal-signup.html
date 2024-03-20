@@ -199,10 +199,22 @@
           <p>비밀번호</p>
           <input type="password" name="user-password" id="user-password">
           <span>(영문 대소문자/숫자 4자~16자)</span>
+          <!-- <div class="pop-up">
+            <h2>※ 비밀번호 입력조건</h2>
+            <ul>
+              <li>대소문자/숫자 4자~16자</li>
+              <li>특수문자 및 공백 입력 불가능</li>
+              <li>연속된 문자, 숫자사용 불가능</li>
+              <li>동일한 문자, 숫자를 반복해서 사용 불가능</li>
+              <li>아이디 포함 불가능</li>
+            </ul>
+            <span class="material-icons">close</span>
+          </div> -->
         </li>
         <li>
           <p>비밀번호 확인</p>
           <input type="password" name="user-password-2" id="user-password-2">
+          <span id="user-password-check"></span>
         </li>
         <li>
           <p>이름</p>
@@ -227,6 +239,7 @@
           <input type="text" name="user-email" id="user-email">
         </li>
       </ul>
+      
       <div class="agree">
         <h4 class="agree-title">전체 동의</h4>
         <div class="agree-all">

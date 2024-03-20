@@ -287,8 +287,20 @@ header .top-user .top-user--contents #top-user-line{
 .sign-up--container .user-information #user-id-add {
   color: red;
 }
-.sign-up--container .agree{
-
+#user-password-check{
+  color: red;
+}
+.sign-up--container .user-information li:nth-child(5){
+  position: relative;
+  padding-bottom: 20px;
+}
+.sign-up--container .user-information li:nth-child(5)::after{
+  content: '휴대폰 번호를 입력하세요.';
+  font-size: 10px;
+  color: #888;
+  position: absolute;
+  bottom: 5px;
+  left: 235px;
 }
 .sign-up--container .agree .agree-title{
   font-weight: 600;
@@ -305,7 +317,37 @@ header .top-user .top-user--contents #top-user-line{
 .sign-up--container .agree .agree-all label {
   margin-left: 10px;
 }
-
+/* 
+.sign-up--container .user-information:nth-child(2){
+  position: relative;
+}
+.sign-up--container .user-information .pop-up {
+  width: 400px;
+  color: red;
+  padding: 30px;
+  border: 1px solid #555;
+  box-shadow: 3px 3px 3px #888;
+  position: absolute;
+  background-color: #fff;
+  top:-240px;
+  left: 200px;
+  z-index: 1;
+}
+.sign-up--container .user-information .pop-up h2 {
+  font-weight: 700;
+  padding: 0 0 10px;
+}
+.sign-up--container .user-information .pop-up span {
+  color: #555;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.sign-up--container .user-information .pop-up ul li{
+  list-style: '\2d';
+  color: red;
+} */
 
 .sign-up--container .agree-bottom {
   width: 100%;
