@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+  <link rel="stylesheet" href="./css/socks-appeal-login.css">
+
+  <title>socks appeal shop clone</title>
+  <link rel="icon" href="./icon.png">
+
+  <script defer src="./js/login.js"></script>
+</head>
+<body>
+  <header>
+    <div class="top-contents">
+      <div onclick="menuOpen()" class="logo-place">
+        <a href="./socks-appeal-clone.html">
+          <img src="./img/socks_appeal_logo_large-2_size.png" alt="logo" class="top-logo ">
+          <img src="./img/socks_appeal_logo_large-2_size_color.png" alt="logo" class="top-logo-gray">
+        </a>
+      </div>
+      <nav class="top-menu">
+        <li><a href="javascript:void(0)">WOMEN</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">Crew Socks</a></li>
+            <li><a href="javascript:void(0)">Summer Socks</a></li>
+            <li><a href="javascript:void(0)">Winter Socks</a></li>
+            <li><a href="javascript:void(0)">Knee High</a></li>
+            <li><a href="javascript:void(0)">Tights</a></li>
+            <li><a href="javascript:void(0)">Top</a></li>
+            <li><a href="javascript:void(0)">Accessories</a></li>
+            <li><a href="javascript:void(0)">Other</a></li>
+            <li><a href="javascript:void(0)">OUTLET</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">MEN</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">Crew Socks</a></li>
+            <li><a href="javascript:void(0)">Summer Socks</a></li>
+            <li><a href="javascript:void(0)">Winter Socks</a></li>
+            <li><a href="javascript:void(0)">High Cut</a></li>
+            <li><a href="javascript:void(0)">Top</a></li>
+            <li><a href="javascript:void(0)">Other</a></li>
+            <li><a href="javascript:void(0)">OUTLET</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">KIDS</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">Baby 0-12</a></li>
+            <li><a href="javascript:void(0)">Baby 12-24</a></li>
+            <li><a href="javascript:void(0)">Kids 4-6</a></li>
+            <li><a href="javascript:void(0)">Kids 7-9</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">COLLABORATION</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">Nathalie Late</a></li>
+            <li><a href="javascript:void(0)">INAPSQUARE</a></li>
+            <li><a href="javascript:void(0)">BOOKHOU</a></li>
+            <li><a href="javascript:void(0)">Mogu Takahashi</a></li>
+            <li><a href="javascript:void(0)">HIMAA</a></li>
+            <li><a href="javascript:void(0)">BROWN HAT</a></li>
+            <li><a href="javascript:void(0)">SAMUEL SMALLS</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">GIFT</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">For Him</a></li>
+            <li><a href="javascript:void(0)">For Her</a></li>
+            <li><a href="javascript:void(0)">For Kids</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">BRAND</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">Story of Us</a></li>
+          </ul>
+        </li>
+      </nav>
+      <div class="top-user">
+        <ul>
+          <li class="person">
+            <span class="material-icons">
+              person
+            </span>
+            <div class="top-user--contents">
+              <ul>
+                <li><a href="javascript:void(0)">
+                  <img src="./img/kr_emoji.png" alt="kr_flag"></a>
+                  <a href="javascript:void(0)"><img src="./img/us_emoji.png" alt="us_flag"></a>
+                </li>
+                <li><div id="top-user-line"></div></li>
+                <li><a href="javascript:void(0)">로그인</a></li>
+                <li><a href="javascript:void(0)">회원가입</a></li>
+                <li><a href="javascript:void(0)">주문조회</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="basket">
+            <span class="material-icons">
+              work_outline
+            </span>
+          </li>
+          <li class="search">
+            <span class="material-icons">
+              search
+            </span>
+          </li>
+        </ul>
+      </div>
+      <nav class="top-menu-moblile">
+        <span class="material-icons" onclick="menuClose()">close</span>
+        <li><a href="javascript:void(0)">WOMEN</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">Crew Socks</a></li>
+            <li><a href="javascript:void(0)">Summer Socks</a></li>
+            <li><a href="javascript:void(0)">Winter Socks</a></li>
+            <li><a href="javascript:void(0)">Knee High</a></li>
+            <li><a href="javascript:void(0)">Tights</a></li>
+            <li><a href="javascript:void(0)">Top</a></li>
+            <li><a href="javascript:void(0)">Accessories</a></li>
+            <li><a href="javascript:void(0)">Other</a></li>
+            <li><a href="javascript:void(0)">OUTLET</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">MEN</a>
+          <ul class="menu-view display">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">Crew Socks</a></li>
+            <li><a href="javascript:void(0)">Summer Socks</a></li>
+            <li><a href="javascript:void(0)">Winter Socks</a></li>
+            <li><a href="javascript:void(0)">High Cut</a></li>
+            <li><a href="javascript:void(0)">Top</a></li>
+            <li><a href="javascript:void(0)">Other</a></li>
+            <li><a href="javascript:void(0)">OUTLET</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">KIDS</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">Baby 0-12</a></li>
+            <li><a href="javascript:void(0)">Baby 12-24</a></li>
+            <li><a href="javascript:void(0)">Kids 4-6</a></li>
+            <li><a href="javascript:void(0)">Kids 7-9</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">COLLABORATION</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">Nathalie Late</a></li>
+            <li><a href="javascript:void(0)">INAPSQUARE</a></li>
+            <li><a href="javascript:void(0)">BOOKHOU</a></li>
+            <li><a href="javascript:void(0)">Mogu Takahashi</a></li>
+            <li><a href="javascript:void(0)">HIMAA</a></li>
+            <li><a href="javascript:void(0)">BROWN HAT</a></li>
+            <li><a href="javascript:void(0)">SAMUEL SMALLS</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">GIFT</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">All</a></li>
+            <li><a href="javascript:void(0)">For Him</a></li>
+            <li><a href="javascript:void(0)">For Her</a></li>
+            <li><a href="javascript:void(0)">For Kids</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)">BRAND</a>
+          <ul class="menu-view">
+            <li><a href="javascript:void(0)">Story of Us</a></li>
+          </ul>
+        </li>
+      </nav>
+        
+      </div>
+    </div>
+  </header>
+  <section class="log-in-container">
+    <div class="inner">
+      <h2>로그인</h2>
+      <div class="log-in-input">
+        <input type="text" name="id" id="id" placeholder="아이디">
+        <input type="password" name="password" id="password" placeholder="비밀번호">
+      </div>
+      <div class="log-in-text-group">
+        <p>보안접속</p>
+        <a href="javascript:void(0)">아이디찾기</a>
+        <a href="javascript:void(0)">비밀번호찾기</a>
+        <a href="javascript:void(0)">회원가입</a>
+      </div>
+      <a href="javascript:void(0)">로그인</a>
+    </div>
+  </section>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-bg">
+        <div class="inner">
+          <div class="footer-first">
+            <div class="footer-head">
+              <img src="./img_socks_appeal/Logo_189_36_WT.png" alt="socks-appeal-logo">
+              <a href="javascript:void(0)">Offical Instagram</a>
+            </div>
+            <div class="footer-body">
+              <p>COMPANY : 삭스어필 (주) CEO : 김문구,유정민 PHONE : 070-4322-0029 / FAX : 070-8239-5513  </p>
+              <p>BUSINESS LICENCE : [211-88-87245] E-COMMERCE PERMINT 2022-서울성동-01699 <a href="javascript:void(0)">[사업자정보확인]</a></p>
+              <p>ADDRESS : 04791 서울특별시 성동구 성수일로 111 (성수동1가) 선명스퀘어 711호</p>
+              <p>PERSONL INFORMATION MANAGER : <a href="javascript=void(0)">김문구 (admin@sockappeal.net)</a></p>
+            </div>
+            <div class="coptright">
+              <p>Copyright(C) 2022 삭스어필 (주) ALL RIGHT REVERVED</p>
+            </div>
+          </div>
+          <div class="footer-second">
+            <h4>고객문의 대표전화</h4>
+            <h2>070-422-0029</h2>
+            <p>평일 13:00 - 18:00</p>
+            <p>주말 및 공휴일은 휴무입니다.</p>
+            <h4>입금계좌안내</h4>
+            <p>기업은행 674-010574-04-011</p>
+            <p>예금주 : 삭스어필주식회사</p>
+          </div>
+          <div class="footer-third">
+            <h4><a href="javascript:void(0)">회사소개</a></h4>
+            <h4><a href="javascript:void(0)">이용약관</a></h4>
+            <h4><a href="javascript:void(0)">개인정보처리방침</a></h4>
+            <h4><a href="javascript:void(0)">이용안내</a></h4>
+            <div class="footer-third-logo">
+              <img src="./img_socks_appeal/footer_w01.png" alt="footer-logo-1">
+              <img src="./img_socks_appeal/footer_w02.png" alt="footer-logo-2">
+              <img src="./img_socks_appeal/footer_w03.png" alt="footer-logo-3">
+              <img src="./img_socks_appeal/footer_w04.png" alt="footer-logo-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

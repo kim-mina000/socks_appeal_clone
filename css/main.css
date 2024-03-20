@@ -903,7 +903,9 @@ transition-delay: visibility 0.5s;
     font-size: 70%;
     top: 60%;
   }
-
+  .main-1--recommandetion .recommandetion-generation{
+    justify-content: center;
+  }
   .main-1--recommandetion .recommandetion-generation .men-kids-wrap {
     display: none;
   }
