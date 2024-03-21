@@ -896,6 +896,9 @@ transition-delay: visibility 0.5s;
 
 /* media */
 @media screen and (width < 1279px) {
+  header .top-menu-moblile {
+    display: none;
+  }
   .top-contents .top-user {
     display: none;}
   .inner {
@@ -933,13 +936,14 @@ transition-delay: visibility 0.5s;
   }
 
 }
-@media screen and (max-width:479px) {
+@media screen and (width<479px) {
   header .top-menu {
     display: none;  
   }
   header:hover .top-menu-moblile{
     display: block;
   }
+
   header:hover {
     width: 100%;
     height: 100%;

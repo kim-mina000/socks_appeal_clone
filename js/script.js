@@ -85,19 +85,18 @@ badgeDown.addEventListener('click', function () {
 
 // HEADER scroll내릴시 고정
 // HEADER scroll내릴시 top-logo scale 변환
+// hamburger-menu 
 const headerEl = document.querySelector('header');
 window.addEventListener('scroll', function () {
   if (window.scrollY > 50) {
     headerEl.classList.add('header-style');
     headerEl.querySelector('.top-logo').style.scale = '80%';
     headerEl.querySelector('.top-logo-gray').style.scale = '80%';
-    headerEl.querySelector('.hamburger-menu').style.display = "block";
 
   } else {
     headerEl.classList.remove ('header-style');
     headerEl.querySelector('.top-logo').style.scale = '100%';
     headerEl.querySelector('.top-logo-gray').style.scale = '100%';
-    headerEl.querySelector('.hamburger-menu').style.display = "none";
   }
 })
 // featured - 호버시 다른상품 보이게
