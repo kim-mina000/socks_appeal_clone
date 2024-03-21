@@ -91,11 +91,13 @@ window.addEventListener('scroll', function () {
     headerEl.classList.add('header-style');
     headerEl.querySelector('.top-logo').style.scale = '80%';
     headerEl.querySelector('.top-logo-gray').style.scale = '80%';
+    headerEl.querySelector('.hamburger-menu').style.display = "block";
 
   } else {
     headerEl.classList.remove ('header-style');
     headerEl.querySelector('.top-logo').style.scale = '100%';
     headerEl.querySelector('.top-logo-gray').style.scale = '100%';
+    headerEl.querySelector('.hamburger-menu').style.display = "none";
   }
 })
 // featured - 호버시 다른상품 보이게
