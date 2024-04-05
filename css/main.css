@@ -115,19 +115,19 @@ header .top-logo-gray {
   /* z-index: 1; */
 }
 
-header .top-menu {
+header .top-menu ul {
   display: flex;
 }
-header .top-menu>li>a {
+header .top-menu>ul>li>a {
   line-height: 80px;
 }
 
-header .top-menu>li {
+header .top-menu>ul>li {
   padding: 0px 15px;
   height: 80px;
 }
 
-header .top-menu>li a {
+header .top-menu>ul>li a {
   color: black;
   font-weight: 500;
 }
@@ -187,11 +187,11 @@ header .top-menu-moblile span:hover {
 header .top-menu-moblile .menu-view {
   display: none;
 }
-header .top-menu-moblile>li:hover>a {
+header .top-menu-moblile>ul>li:hover>a {
   width: 100%;
   text-decoration: underline;
 }
-header .top-menu-moblile>li:hover .menu-view {
+header .top-menu-moblile>ul>li:hover .menu-view {
   display: block;
 }
 header .top-menu-moblile .menu-view li{
@@ -284,7 +284,6 @@ z-index: -9;
 .slider-container .swiper-slide .slide-text_group {
   color: white;
   display: flex;
-  align-items: left;
   justify-content: center;
   flex-direction: column;
 
@@ -489,7 +488,7 @@ z-index: -9;
   overflow: hidden;
 }
 .main-3--weekly .weekly-container .weekly-group {
-  width: calc((390*8)+(15*7));
+  width: 3225px;
   display: flex;
   justify-content: space-between;
   column-gap: 15px;
@@ -782,7 +781,7 @@ footer h4{
   font-size: 14px;
   padding: 10px 0 5px;
 }
-footer h2{
+footer .h_bold{
   color: #fff;
   font-size: 25px;
 }
@@ -824,7 +823,7 @@ footer .footer-first .footer-body {
   padding: 40px 0;
   line-height: 1.5;
 }
-footer .footer-second h2, footer .footer-second p{
+footer .footer-second .h_bold, footer .footer-second p{
   padding: 5px 0;
 }
 
@@ -889,7 +888,7 @@ transition-delay: visibility 0.5s;
 .badge span::before {
   content: "";
   width: 30px;
-  height: 1;
+  height: 1px;
   background-color: red;
   position: absolute;
 }

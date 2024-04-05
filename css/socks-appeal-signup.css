@@ -20,13 +20,15 @@ body {
 header {
   transition: background-color 0.6s;
   position: fixed;
-  top: 0; 
+  top: 0;
   z-index: 99;
   width: 100%;
+  border-bottom: 1px solid #8888881f;
+  transition:box-shadow 0.5s ;
 }
 header:hover {
   background-color: #ffffffc0;
-  box-shadow: 5px 0 5px #8888886b;
+  box-shadow: 5px 0 5px#8888886b;
 }
 .header-style {
   background-color: #ffffffc0;
@@ -82,19 +84,19 @@ header .top-logo-gray {
   /* z-index: 1; */
 }
 
-header .top-menu {
+header .top-menu ul {
   display: flex;
 }
-header .top-menu>li>a {
+header .top-menu>ul>li>a {
   line-height: 80px;
 }
 
-header .top-menu>li {
+header .top-menu>ul>li {
   padding: 0px 15px;
   height: 80px;
 }
 
-header .top-menu>li a {
+header .top-menu>ul>li a {
   color: black;
   font-weight: 500;
 }
@@ -377,6 +379,7 @@ header .top-user .top-user--contents #top-user-line{
 }
 .sign-up--container .agree-bottom .agree-each .agree-textp-area {
   display: flex;
+  align-items: center;
 }
 .sign-up--container .sign-up-btn {
   width: 80px;

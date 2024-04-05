@@ -76,19 +76,19 @@ header .top-logo-gray {
   /* z-index: 1; */
 }
 
-header .top-menu {
+header .top-menu ul {
   display: flex;
 }
-header .top-menu>li>a {
+header .top-menu>ul>li>a {
   line-height: 80px;
 }
 
-header .top-menu>li {
+header .top-menu>ul>li {
   padding: 0px 15px;
   height: 80px;
 }
 
-header .top-menu>li a {
+header .top-menu>ul>li a {
   color: black;
   font-weight: 500;
 }
