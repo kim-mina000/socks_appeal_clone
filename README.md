@@ -1,7 +1,7 @@
 # Studing ... 📚
 클론코딩 프로젝트 두번째
 
-기본적인 쇼핑몰 프레임일 뿐더러 디자인적으로 센스있는 쇼핑몰이라고 생각하여 클론 코딩을 하게 되었습니다
+기본적인 쇼핑몰 프레임일 뿐더러 디자인적으로 센스있는 쇼핑몰이라고 생각하여 해당 쇼핑몰을 선택, 클론 코딩을 하게 되었습니다
 
 ## 📚 Frameworks
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
